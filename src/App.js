@@ -3,12 +3,13 @@ import HelloWorld from './HelloWorld'
 import WhatReactRenders from './WhatReactRenders'
 import DisplayName from './DisplayName'
 import DisplayArray from './DisplayArray'
+import Border from './Border'
+
+
 
 const App = () => (
      <div>
-       <DisplayArray 
-        listOfNames={['Ala','Ela','Izabela']}
-       />
+       <Border/>
       </div>
     )
 

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const DisplayArray = (props) => (
     <div>
         {props.listOfNames[0]}{props.listOfNames[1]}{props.listOfNames[2]}
