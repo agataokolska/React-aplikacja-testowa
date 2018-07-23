@@ -28,7 +28,7 @@ const WhatReactRenders = () => (
     <br />
     <ul>
         {
-            stringVal.map(singleEl => <li>{singleEl}</li>)
+            stringVal.map((singleEl,index) => <li key={index}> {singleEl}</li>)
         }
     </ul>
      </div>
