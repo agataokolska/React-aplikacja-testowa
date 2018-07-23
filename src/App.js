@@ -5,11 +5,16 @@ import DisplayName from './DisplayName'
 import DisplayArray from './DisplayArray'
 import Border from './Border'
 
-
-
+const namesArray = ['Ala', 'Ela','Zosia']
 const App = () => (
      <div>
-       <Border/>
+       <Border>
+       <h1>List of names:</h1>
+       <DisplayArray
+       listOfNames={namesArray}
+       />
+
+       </Border>
       </div>
     )
 
