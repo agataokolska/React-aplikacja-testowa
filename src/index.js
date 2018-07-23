@@ -1,7 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+//imports from npm packages
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//import external resources
+import './index.css'
+
+//import my own components (from src folder)
+import App from './App'
+
+ReactDOM.render(
+<App />, 
+document.getElementById('root'))
 
