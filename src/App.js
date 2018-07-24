@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar'
+import Drawer from 'material-ui/Drawer'
+import MenuItem from 'material-ui/MenuItem'
 
 import BasicComponents from './BasicComponents'
 import Dashboard from './Dashboard'
@@ -14,6 +16,11 @@ const App = () => (
         <AppBar
         title={'JFDDL5 APP'}
         />
+        <Drawer
+        open={true}
+        >
+            <MenuItem>Menu item 1</MenuItem>
+        </Drawer>
         <Link to={'/dashboard'}>Dashboard</Link>
         <Link to={'/basiccomponents'}>BasicComponents</Link>
         <Link to={'/passing-parameters/cos'}>PassingParameters</Link>
