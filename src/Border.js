@@ -5,7 +5,7 @@ const styles = {border: '1px solid black'}
 
 const Border = (props) => (
     <div style = {styles}> 
-        {props.children}
+        {props.children} 
     </div>
 )
 
