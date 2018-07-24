@@ -8,7 +8,11 @@ import Dashboard from './Dashboard'
 const App = () => (
 <div>
 <Router>
+  <div>
+    <Route path={'/'} exact component={Dashboard}/>
     <Route path={'/dashboard'} component={Dashboard}/>
+    <Route path={'/basiccomponents'} component={BasicComponents}/>
+  </div>
 </Router>
 </div>
 )
