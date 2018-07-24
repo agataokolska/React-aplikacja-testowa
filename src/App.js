@@ -1,14 +1,19 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import AppBar from 'material-ui/AppBar'
 
 import BasicComponents from './BasicComponents'
 import Dashboard from './Dashboard'
 import PassingParameters from './PassingParameters'
 
+
 const App = () => (
   <div>
     <Router>
       <div>
+        <AppBar
+        title={'JFDDL5 APP'}
+        />
         <Link to={'/dashboard'}>Dashboard</Link>
         <Link to={'/basiccomponents'}>BasicComponents</Link>
         <Link to={'/passing-parameters/cos'}>PassingParameters</Link>
