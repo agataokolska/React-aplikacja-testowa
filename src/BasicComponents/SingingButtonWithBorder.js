@@ -1,15 +1,16 @@
 import React from 'react'
-import Border from './Border'
+
 import SingingButton from './SingingButton'
+import Paper from 'material-ui/Paper'
 
 const SingingButtonWithBorder = (props) => (
-    <Border>
+    <Paper>
         <SingingButton
         label={props.label}
         sound={props.sound}
         makeSound={props.makeSound}
          />
-    </Border>
+    </Paper>
 )
 
 export default SingingButtonWithBorder
