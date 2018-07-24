@@ -3,9 +3,9 @@ import React from 'react'
 const SingingButton = (props) => (
     <div>
         <button
-            onClick={()=> alert ('lalala')}
+            onClick={()=> alert (props.sound)}
         >
-            Label
+            {props.label}
         </button>
     </div>
 )

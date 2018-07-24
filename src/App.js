@@ -6,8 +6,14 @@ import SingingButton from './SingingButton'
 const App = () => (
      
        <Border>
-         <SingingButton/>
-       
+         <SingingButton
+         label={'Przycisk 1'}
+         sound={'La la la'}
+         />
+         <SingingButton
+         label={'Przycisk 2'}
+         sound={'Kotki dwa!'}
+         />
 
        </Border>
       
