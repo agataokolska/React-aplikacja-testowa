@@ -4,17 +4,20 @@ import Forms from './Forms'
 
 class ToDo extends React.Component {
     state = {
-        tasks:[
-            {isCompleted:false, text:'Wynies śmieci', key:'123'},
-            {isCompleted:false, text:'Zmyj gary', key:'234'},
-        ]
+        tasks: [
+            { isCompleted: false, text: 'Wynies śmieci', key: '123' },
+            { isCompleted: false, text: 'Zmyj gary', key: '234' },
+        ],
+        newTaskText: 'ala'
     }
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                <Forms/>
+                <Forms
+                    newTaskText={this.state.newTaskText}
+                />
                 <List
-                    tasksList = {this.state.tasks}
+                    tasksList={this.state.tasks}
                 />
             </div>
         )

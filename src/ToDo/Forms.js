@@ -4,7 +4,11 @@ import PaperRefined from '../components/PaperRefined';
 const Forms = (props) => (
 
     <PaperRefined>
-            forms
+            <input 
+            type={'text'}
+            value={props.newTaskText}
+            />
+            <button>Dodaj</button>
     </PaperRefined>
 )
 
