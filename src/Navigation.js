@@ -18,7 +18,7 @@ class Navigation extends React.Component {
             <div>
                 <AppBar
                     title={'JFDDL5 APP'}
-                    onClick={this.toggleHandler}
+                    onLeftIconButtonClick={this.toggleHandler}
                 />
                 <Sidebar 
                 isSidebarOpen ={this.state.isOpen}
