@@ -4,19 +4,24 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 
 class Sidebar extends React.Component {
+    state = {
+        isOpen: true
+    }
+
     render() {
         return (
-            <div>
+            
                 <Drawer
-                    open={false}
+                    open={this.state.isOpen}
                 >
+                    <MenuItem>CLOSE</MenuItem>
                     <Link
                         to={'/dashboard'}
                         style={{ textDecoration: 'none' }}
                     >
                         <MenuItem>
                             Dashboard
-        </MenuItem>
+                        </MenuItem>
                     </Link>
 
                     <Link
@@ -25,7 +30,7 @@ class Sidebar extends React.Component {
                     >
                         <MenuItem>
                             BasicComponents
-        </MenuItem>
+                         </MenuItem>
                     </Link>
 
                     <Link
@@ -34,10 +39,10 @@ class Sidebar extends React.Component {
                     >
                         <MenuItem>
                             PassingParameters
-        </MenuItem>
+                        </MenuItem>
                     </Link>
                 </Drawer>
-            </div>
+            
         )
     }
 }
