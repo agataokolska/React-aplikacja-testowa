@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar'
 
 class Navigation extends React.Component {
     state = {
-        isOpen: true
+        isOpen: false
     }
 
     toggleHandler = () => {

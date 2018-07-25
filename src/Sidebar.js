@@ -9,6 +9,8 @@ class Sidebar extends React.Component {
             
                 <Drawer
                     open={this.props.isSidebarOpen}
+                    docked={false}
+                    onRequestChange={this.props.toggleSidebar}
                 >
                     <MenuItem
                         onClick={this.props.toggleSidebar}
