@@ -8,7 +8,14 @@ class Counter extends React.Component {
 
 
     incHandler = () => {
-        this.state.number = this.state.number + 1
+        this.setState({
+            number: this.state.number + 1
+        })
+    }
+    decHandler = () => {
+        this.setState({
+            number: this.state.number - 1
+        })
     }
 
         render(){
@@ -20,7 +27,9 @@ class Counter extends React.Component {
                     >
                         +
                     </button>
-                    <button>-</button>
+                    <button
+                    onClick={this.decHandler}
+                    >-</button>
 
                 </div>
             )
