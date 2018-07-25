@@ -6,7 +6,11 @@ const List = (props) => (
 
     <PaperRefined>
         {props.tasksList.map(
-            task => <Task task={task}/>
+            (task) => (
+                <Task
+                    task={task}
+                    key={task.key} />
+            )
         )
         }
     </PaperRefined>

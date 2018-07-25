@@ -1,9 +1,11 @@
 import React from 'react'
+import PaperRefined from '../components/PaperRefined';
 
 const Forms = (props) => (
 
-    <div>
-    </div>
+    <PaperRefined>
+            forms
+    </PaperRefined>
 )
 
 export default Forms
