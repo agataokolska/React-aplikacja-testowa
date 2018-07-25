@@ -12,11 +12,7 @@ class Sidebar extends React.Component {
                     docked={false}
                     onRequestChange={this.props.toggleSidebar}
                 >
-                    <MenuItem
-                        onClick={this.props.toggleSidebar}
-                    >
-                    CLOSE
-                    </MenuItem>
+                
                     <Link
                         to={'/dashboard'}
                         style={{ textDecoration: 'none' }}
