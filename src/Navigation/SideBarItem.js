@@ -3,7 +3,9 @@ import MenuItem from 'material-ui/MenuItem'
 import { Link } from 'react-router-dom'
 
 const SideBarItem = (props) => (
-    <div>
+    <div
+    onClick={props.toggleSidebar}>
+    
         <Link
             to={props.to}
             style={{ textDecoration: 'none' }}

@@ -15,14 +15,27 @@ class Sidebar extends React.Component {
                      <SideBarItem
                         to={'/dashboard'}
                         label={'Dashboard'}
+                        toggleSidebar={this.props.toggleSidebar}
                     />
                     <SideBarItem
                         to={'/basiccomponents'}
                         label={'BasicComponents'}
+                        toggleSidebar={this.props.toggleSidebar}
                     />
                     <SideBarItem
                          to={'/passing-parameters/cos'}
                         label={'PassingParameters'}
+                        toggleSidebar={this.props.toggleSidebar}
+                    />
+                    <SideBarItem
+                         to={'/counter'}
+                        label={'Counter'}
+                        toggleSidebar={this.props.toggleSidebar}
+                    />
+                    <SideBarItem
+                         to={'/todo'}
+                        label={'ToDo'}
+                        toggleSidebar={this.props.toggleSidebar}
                     />
                    
                 </Drawer>
