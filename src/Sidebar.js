@@ -8,13 +8,22 @@ class Sidebar extends React.Component {
         isOpen: true
     }
 
+    toggleHandler = () => {
+            this.setState({
+                isOpen: !this.state.isOpen
+            })
+    }
     render() {
         return (
             
                 <Drawer
                     open={this.state.isOpen}
                 >
-                    <MenuItem>CLOSE</MenuItem>
+                    <MenuItem
+                        onClick={this.toggleHandler}
+                    >
+                    CLOSE
+                    </MenuItem>
                     <Link
                         to={'/dashboard'}
                         style={{ textDecoration: 'none' }}
