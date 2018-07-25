@@ -7,6 +7,7 @@ const Forms = (props) => (
             <input 
             type={'text'}
             value={props.newTaskText}
+            onChange={props.onNewTaskTextChanged}
             />
             <button>Dodaj</button>
     </PaperRefined>

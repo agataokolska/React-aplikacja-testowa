@@ -10,11 +10,18 @@ class ToDo extends React.Component {
         ],
         newTaskText: 'ala'
     }
+
+    onNewTaskTextChanged = (event) => {
+            this.setState({
+                newTaskText: event.target.value
+            })
+    }
     render() {
         return (
             <div>
                 <Forms
                     newTaskText={this.state.newTaskText}
+                    onNewTaskTextChanged={this.onNewTaskTextChanged}
                 />
                 <List
                     tasksList={this.state.tasks}
