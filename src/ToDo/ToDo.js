@@ -1,4 +1,5 @@
 import React from 'react'
+import List from './List'
 
 class ToDo extends React.Component {
     state = {
@@ -10,7 +11,9 @@ class ToDo extends React.Component {
     render(){
         return(
             <div>
-                
+                <List
+                    tasksList = {this.state.tasks}
+                />
             </div>
         )
     }
