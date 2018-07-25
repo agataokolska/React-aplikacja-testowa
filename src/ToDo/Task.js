@@ -1,10 +1,11 @@
 import React from 'react'
+import {ListItem} from 'material-ui/List'
 
 const Task = (props) => (
 
-    <div>
+    <ListItem>
         {props.task.text}
-    </div>
+    </ListItem>
 )
 
 export default Task
