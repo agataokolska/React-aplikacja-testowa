@@ -6,7 +6,7 @@ import MenuItem from 'material-ui/MenuItem'
 const Sidebar = () => (
     <div>
         <Drawer
-            open={true}
+            open={false}
         >
             <Link
                 to={'/dashboard'}
