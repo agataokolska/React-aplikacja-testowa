@@ -1,9 +1,12 @@
 import React from 'react'
+import ListItem from 'material-ui/List/ListItem';
 
 const User = (props) => (
-    <div>
-        {props.user.name.first}
-    </div>
+    <ListItem 
+    primaryText={props.user.name.first}
+    secondaryText={props.user.email}   
+    />
+   
 )
 
 export default User
