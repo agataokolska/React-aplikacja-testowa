@@ -20,15 +20,8 @@ class FetchingRandomUsers extends React.Component {
     }
 
     render() {
-
-        return (
-            <div>
-                <PaperRefined>
-                    <Search />
-                </PaperRefined>
-                <PaperRefined>
-                    {
-                        this.state.randomUserData
+        const usersList = (
+            this.state.randomUserData
                         &&
                         this.state.randomUserData
                             .map(user => (
@@ -37,7 +30,15 @@ class FetchingRandomUsers extends React.Component {
                                     user={user}
                                 />
                             ))
-                    }
+        )
+
+        return (
+            <div>
+                <PaperRefined>
+                    <Search />
+                </PaperRefined>
+                <PaperRefined>
+                    {usersList}
                 </PaperRefined>
             </div>
         )
