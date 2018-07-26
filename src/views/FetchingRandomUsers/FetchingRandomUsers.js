@@ -1,34 +1,39 @@
 import React from 'react'
+import User from './User'
 
 class FetchingRandomUsers extends React.Component {
-    state =  {
+    state = {
         randomUserData: null
     }
 
-    componentDidMount(){
+    componentDidMount() {
         fetch("https://randomuser.me/api?results=10")
             .then(response => response.json())
             .then(dataFromResponse => {
                 this.setState({
-                    randomUserData: dataFromResponse 
-                        
+                    randomUserData: dataFromResponse.results
+
                 })
             })
     }
 
-    render(){
+    render() {
 
         return (
 
             <div>
-                {this.state.randomUserData!==null ? 
-                    this.state.randomUserData.results[0].name.first + 
-                    ' ' + 
-                    this.state.randomUserData.results[0].name.last 
-                    : 
-                    "czekam na dane"}
-                
-                </div>
+                {
+                    this.state.randomUserData
+                    &&
+                    this.state.randomUserData
+                        .map(user => (
+                            <User
+                                key={user.login.uuid}
+                                user={user}
+                             />   
+                        ))
+                }
+            </div>
         )
     }
 }
