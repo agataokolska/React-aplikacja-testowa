@@ -21,7 +21,12 @@ class FetchingRandomUsers extends React.Component {
         return (
 
             <div>
-                {this.state.randomUserData!==null ? this.state.randomUserData.results[0].name.first + ' ' + this.state.randomUserData.results[0].name.last : "czekam na dane"}
+                {this.state.randomUserData!==null ? 
+                    this.state.randomUserData.results[0].name.first + 
+                    ' ' + 
+                    this.state.randomUserData.results[0].name.last 
+                    : 
+                    "czekam na dane"}
                 
                 </div>
         )
