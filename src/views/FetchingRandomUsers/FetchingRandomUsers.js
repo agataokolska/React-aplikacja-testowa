@@ -1,5 +1,6 @@
 import React from 'react'
 import User from './User'
+import PaperRefined from '../../components/PaperRefined';
 
 class FetchingRandomUsers extends React.Component {
     state = {
@@ -21,7 +22,7 @@ class FetchingRandomUsers extends React.Component {
 
         return (
 
-            <div>
+            <PaperRefined>
                 {
                     this.state.randomUserData
                     &&
@@ -33,7 +34,7 @@ class FetchingRandomUsers extends React.Component {
                              />   
                         ))
                 }
-            </div>
+            </PaperRefined>
         )
     }
 }
