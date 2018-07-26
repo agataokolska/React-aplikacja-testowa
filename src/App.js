@@ -8,7 +8,7 @@ import PassingParameters from './views/PassingParameters'
 import Counter from './views/Counter'
 import ToDo from './views/ToDo'
 import Navigation from './views/Navigation'
-import FetchingRandomUsers from './views/FetchingRandomUsers/FetchingRandomUsers';
+import FetchingRandomUsers from './views/FetchingRandomUsers';
 
 const App = () => (
   <div>
