@@ -46,7 +46,7 @@ class FetchingRandomUsers extends React.Component {
                 <PaperRefined>
                     <Search 
                     searchPhraseToBeAsProps={this.state.searchPhrase}
-                    toBePassedByProps={this.searchPhraseChangeHandler}
+                    searchPhraseChangeHandlerToBeProps={this.searchPhraseChangeHandler}
                     />
                 </PaperRefined>
                 <PaperRefined>

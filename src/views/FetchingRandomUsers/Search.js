@@ -6,7 +6,7 @@ const Search = (props) => (
         <TextField
             placeholder={'Search'}
             fullWidth={true}
-            onChange={props.toBePassedByProps}
+            onChange={props.searchPhraseChangeHandlerToBeProps}
             value={props.searchPhraseToBeAsProps}
         />
     </div>
