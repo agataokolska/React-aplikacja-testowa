@@ -5,9 +5,10 @@ import Search from './Search'
 
 class FetchingRandomUsers extends React.Component {
     state = {
-        randomUserData: null
+        randomUserData: null,
+        searchPhrase: ''
     }
-
+    
     componentDidMount() {
         fetch("https://randomuser.me/api?results=10")
             .then(response => response.json())
@@ -17,6 +18,14 @@ class FetchingRandomUsers extends React.Component {
 
                 })
             })
+    }
+
+    searchPhraseChangeHandler = (event) => {
+        this.setState({
+            searchPhrase: event.target.value
+            
+        })
+        
     }
 
     render() {
@@ -35,7 +44,10 @@ class FetchingRandomUsers extends React.Component {
         return (
             <div>
                 <PaperRefined>
-                    <Search />
+                    <Search 
+                    searchPhraseToBeAsProps={this.state.searchPhrase}
+                    toBePassedByProps={this.searchPhraseChangeHandler}
+                    />
                 </PaperRefined>
                 <PaperRefined>
                     {usersList}
