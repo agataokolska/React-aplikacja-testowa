@@ -29,7 +29,7 @@ class FetchingRandomUsers extends React.Component {
     }
 
     render() {
-        const usersList = (
+        const searchResults = (
             this.state.randomUserData
                         &&
                         this.state.randomUserData
@@ -42,6 +42,19 @@ class FetchingRandomUsers extends React.Component {
                             ))
         )
 
+
+        const usersList = (
+            this.state.randomUserData
+                        &&
+                        this.state.randomUserData
+
+                            .map(user => (
+                                <User
+                                    key={user.login.uuid}
+                                    user={user}
+                                />
+                            ))
+        )
         return (
             <div>
                 <PaperRefined>
@@ -49,6 +62,9 @@ class FetchingRandomUsers extends React.Component {
                     searchPhrase={this.state.searchPhrase}
                     searchPhraseChangeHandler={this.searchPhraseChangeHandler}
                     />
+                </PaperRefined>
+                <PaperRefined>
+                    {searchResults}
                 </PaperRefined>
                 <PaperRefined>
                     {usersList}
