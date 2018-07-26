@@ -11,6 +11,22 @@ class ToDo extends React.Component {
         newTaskText: ''
     }
 
+
+    
+    componentDidMount(){
+        const lastState = JSON.parse(localStorage.getItem('jfddl-app-counter-state'))
+
+        if (lastState===null) return
+
+        this.setState(lastState)
+
+    }
+
+    componentWillUnmount(){
+        localStorage.setItem('jfddl-app-counter-state', JSON.stringify(this.state))
+    }
+
+    
     onNewTaskTextChanged = (event) => {
         this.setState({
             newTaskText: event.target.value
