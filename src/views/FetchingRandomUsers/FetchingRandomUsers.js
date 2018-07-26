@@ -33,6 +33,7 @@ class FetchingRandomUsers extends React.Component {
             this.state.randomUserData
                         &&
                         this.state.randomUserData
+                            .filter(user => user.name.first.indexOf(this.state.searchPhrase) !== -1)
                             .map(user => (
                                 <User
                                     key={user.login.uuid}
@@ -45,8 +46,8 @@ class FetchingRandomUsers extends React.Component {
             <div>
                 <PaperRefined>
                     <Search 
-                    searchPhraseToBeAsProps={this.state.searchPhrase}
-                    searchPhraseChangeHandlerToBeProps={this.searchPhraseChangeHandler}
+                    searchPhrase={this.state.searchPhrase}
+                    searchPhraseChangeHandler={this.searchPhraseChangeHandler}
                     />
                 </PaperRefined>
                 <PaperRefined>
