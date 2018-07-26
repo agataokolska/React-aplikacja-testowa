@@ -29,17 +29,19 @@ class FetchingRandomUsers extends React.Component {
     }
 
     render() {
+
+        const displayUser = user => (
+            <User
+                key={user.login.uuid}
+                user={user}
+            />
+        )
         const searchResults = (
             this.state.randomUserData
                         &&
                         this.state.randomUserData
                             .filter(user => user.name.first.indexOf(this.state.searchPhrase) !== -1)
-                            .map(user => (
-                                <User
-                                    key={user.login.uuid}
-                                    user={user}
-                                />
-                            ))
+                            .map(displayUser)
         )
 
 
@@ -48,12 +50,7 @@ class FetchingRandomUsers extends React.Component {
                         &&
                         this.state.randomUserData
 
-                            .map(user => (
-                                <User
-                                    key={user.login.uuid}
-                                    user={user}
-                                />
-                            ))
+                            .map(displayUser)
         )
         return (
             <div>
