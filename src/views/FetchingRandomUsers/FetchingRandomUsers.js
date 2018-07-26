@@ -6,7 +6,7 @@ class FetchingRandomUsers extends React.Component {
     }
 
     componentDidMount(){
-        fetch("https://randomuser.me/api")
+        fetch("https://randomuser.me/api?results=10")
             .then(response => response.json())
             .then(dataFromResponse => {
                 this.setState({
