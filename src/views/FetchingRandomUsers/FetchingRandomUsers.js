@@ -40,7 +40,11 @@ class FetchingRandomUsers extends React.Component {
             this.state.randomUserData
                         &&
                         this.state.randomUserData
-                            .filter(user => (user.name.first + ' ' + user.name.last).indexOf(this.state.searchPhrase) !== -1)
+                            .filter(user => (
+                                (user.name.first + ' ' + user.name.last).indexOf(this.state.searchPhrase) !== -1
+                                ||
+                                user.email.indexOf(this.state.searchPhrase) !== -1
+                            ))
                             .map(displayUser)
         )
 
