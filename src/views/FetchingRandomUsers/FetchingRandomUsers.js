@@ -10,7 +10,8 @@ class FetchingRandomUsers extends React.Component {
             .then(response => response.json())
             .then(dataFromResponse => {
                 this.setState({
-                    randomUserData: dataFromResponse
+                    randomUserData: dataFromResponse 
+                        
                 })
             })
     }
@@ -20,7 +21,8 @@ class FetchingRandomUsers extends React.Component {
         return (
 
             <div>
-                {JSON.stringify(this.state.randomUserData)}
+                {this.state.randomUserData!==null ? this.state.randomUserData.results[0].name.first + ' ' + this.state.randomUserData.results[0].name.last : "czekam na dane"}
+                
                 </div>
         )
     }
