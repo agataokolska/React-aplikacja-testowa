@@ -5,8 +5,7 @@ const User = (props) => (
     <ListItem 
     primaryText={props.user.name.first}
     secondaryText={props.user.email}   
-    />
-   
+    />  
 )
 
 export default User
