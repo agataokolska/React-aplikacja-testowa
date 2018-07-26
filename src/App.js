@@ -8,6 +8,8 @@ import PassingParameters from './views/PassingParameters'
 import Counter from './views/Counter'
 import ToDo from './views/ToDo'
 import Navigation from './views/Navigation'
+import FetchingRandomUsers from './views/FetchingRandomUsers/FetchingRandomUsers';
+
 const App = () => (
   <div>
     <Router>
@@ -21,6 +23,7 @@ const App = () => (
 
         <Route path={'/counter'} component={() => <Counter number={5}/>} />
         <Route path={'/todo'} component={ToDo}/>
+        <Route path={'/fetching-random-users'} component={FetchingRandomUsers}/>
       </div>
     </Router>
   </div>
